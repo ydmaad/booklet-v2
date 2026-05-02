@@ -1,13 +1,15 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: #f5f4ec;
-    --foreground: #1a1a1a;
+  body {
+    /* theme() 대신 @apply를 사용하여 config의 값을 직접 가져옴 */
+    /* 이렇게 하면 에러가 발생하지 않고 의도가 명확해짐 */
+    @apply bg-brand-bg text-brand-deepGreen antialiased;
   }
-}
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
+  /* RGB 변수가 꼭 필요하다면 여기에 정의 (나중에 투명도 조절용) */
+  :root {
+    --brand-deep-green: 36 90 72;
+    --brand-bg: 245 244 236;
+  }
 }

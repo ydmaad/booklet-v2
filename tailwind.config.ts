@@ -8,7 +8,15 @@ const config: Config = {
     './src/providers/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          deepGreen: '#245a48',
+          gold: '#c29a42',
+          bg: '#f5f4ec',
+        },
+      },
+    },
   },
   plugins: [],
 };
