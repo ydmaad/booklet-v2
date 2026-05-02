@@ -1,15 +1,14 @@
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* 커스텀 컬러를 Tailwind 테마에 등록 (v4 방식) */
+@theme {
+  --color-brand-deepGreen: rgb(36, 90, 72);
+  --color-brand-bg: rgb(245, 244, 236);
+}
 
 @layer base {
   body {
-    /* theme() 대신 @apply를 사용하여 config의 값을 직접 가져옴 */
-    /* 이렇게 하면 에러가 발생하지 않고 의도가 명확해짐 */
+    /* 이제 Tailwind가 등록된 컬러를 알고 있으니 @apply가 정상 작동함 */
     @apply bg-brand-bg text-brand-deepGreen antialiased;
-  }
-
-  /* RGB 변수가 꼭 필요하다면 여기에 정의 (나중에 투명도 조절용) */
-  :root {
-    --brand-deep-green: 36 90 72;
-    --brand-bg: 245 244 236;
   }
 }
