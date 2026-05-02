@@ -1,7 +1,5 @@
 'use client';
 
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -32,29 +30,25 @@ const Home = () => {
   if (!selectedBG) return <div className="h-screen bg-stone-200" />;
 
   return (
-    <div>
-      <Header />
-      <section className="relative h-screen">
-        <Image
-          src={selectedBG}
-          alt="main hero background"
-          fill
-          priority
-          className="object-cover -z-10"
-        />
-        <div className="absolute inset-0 bg-black/20 -z-10"></div>
-        <p className="[text-shadow:_2px_2px_8px_rgba(0,0,0,0.6)] text-white text-5xl font-semibold mb-7 z-10">
-          내가 읽은 책들을 기록해봐요!
-        </p>
-        <Link
-          href="/barcode"
-          className="bg-brand-button text-white px-4 py-2 rounded-lg shadow-lg shadow-brand-button hover:bg-brand-button/75 transition-colors duration-200 z-10"
-        >
-          기록하러 가기
-        </Link>
-      </section>
-      <Footer />
-    </div>
+    <section className="relative h-screen flex flex-col items-center justify-center w-full overflow-hidden">
+      <Image
+        src={selectedBG}
+        alt="main hero background"
+        fill
+        priority
+        className="object-cover -z-10"
+      />
+      <div className="absolute inset-0 bg-black/20 -z-10"></div>
+      <p className="[text-shadow:_2px_2px_8px_rgba(0,0,0,0.6)] text-white text-5xl font-semibold mb-7 z-10">
+        내가 읽은 책들을 기록해봐요!
+      </p>
+      <Link
+        href="/barcode"
+        className="bg-brand-deepGreen text-white px-4 py-2 rounded-lg shadow-lg shadow-brand-deepGreen hover:bg-brand-deepGreen/75 transition-colors duration-200 z-10"
+      >
+        기록하러 가기
+      </Link>
+    </section>
   );
 };
 
