@@ -1,5 +1,7 @@
 'use client';
 
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -31,6 +33,7 @@ const Home = () => {
 
   return (
     <div>
+      <Header />
       <section className="relative h-screen">
         <Image
           src={selectedBG}
@@ -50,6 +53,7 @@ const Home = () => {
           기록하러 가기
         </Link>
       </section>
+      <Footer />
     </div>
   );
 };
