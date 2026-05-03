@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -15,12 +16,16 @@ const Header = () => {
   };
   return (
     <header className="flex justify-between py-3">
-      <div
-        onClick={() => router.push('/')}
-        className="text-xl font-bold cursor-pointer"
-      >
-        <img src="/title.png" alt="title" className="h-14" />
-      </div>
+      <Link href="/" className="cursor-pointer">
+        <Image
+          src="/title.png"
+          alt="title"
+          width={120}
+          height={56}
+          className="object-contain"
+          priority
+        />
+      </Link>
 
       {/* 네비게이션 영역 */}
       <nav className="flex flex-row gap-3">
@@ -35,8 +40,8 @@ const Header = () => {
             <Link href="/mypage" className="ml-5 text-lg">
               마이페이지
             </Link>
-            <button onClick={handleLogout} className="ml-5">
-              <p className="text-lg">로그아웃</p>
+            <button onClick={handleLogout} className="ml-5 text-lg">
+              로그아웃
             </button>
           </div>
         ) : (
