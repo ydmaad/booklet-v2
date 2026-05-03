@@ -33,7 +33,7 @@ export const useBarcodeScanner = () => {
         setIsScanning(false);
         setScanStatus('success');
         playBeep();
-        setTimeout(() => router.push(`/my-review/${code}`), 1500);
+        setTimeout(() => router.push(`/review/create/${code}`), 1500);
       }
     },
   });
