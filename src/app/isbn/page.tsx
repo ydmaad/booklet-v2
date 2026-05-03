@@ -34,7 +34,7 @@ const IsbnInputPage = () => {
       return;
     }
 
-    router.push(`/my-review/${isbn}`);
+    router.push(`/review/create/${isbn}`);
   };
 
   if (!isMounted) return null;
@@ -64,7 +64,7 @@ const IsbnInputPage = () => {
             type="text"
             value={isbn}
             onChange={handleInputChange}
-            placeholder="예: 9788937460449"
+            placeholder="예: 9788925588735"
             className={`text-gray-800 text-xl text-center w-full py-4 rounded-lg shadow-lg transition-all duration-200 border-2 focus:outline-none ${
               errorMessage
                 ? 'border-red-500 shadow-red-100'
