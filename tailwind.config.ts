@@ -14,6 +14,7 @@ const config: Config = {
           deepGreen: '#245a48',
           gold: '#c29a42',
           bg: '#f5f4ec',
+          text: '#c29a42',
         },
       },
     },
