@@ -1,4 +1,4 @@
-import BestsellerList from '@/components/BestsellerList';
+import BestsellerList from '@/components/book/BestsellerList';
 import MainHero from '@/components/MainHero';
 import { getBestsellers } from '@/lib/aladinAPI';
 
